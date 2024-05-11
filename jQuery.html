@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Vragenformulier</title>
+  <script type="text/JavaScript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Vragenformulier</h1>
+  <form id="vragenFormulier">
+    <div>
+      <label for="vraag1">Vraag 1: Wat is je favoriete kleur?</label>
+      <input type="text" id="vraag1" name="vraag1">
+    </div>
+    <div>
+      <label for="vraag2">Vraag 2: Wat is je favoriete dier?</label>
+      <input type="text" id="vraag2" name="vraag2">
+    </div>
+    <div>
+      <label for="vraag3">Vraag 3: Wat is je favoriete vakantiebestemming?</label>
+      <input type="text" id="vraag3" name="vraag3">
+    </div>
+    <button type="submit">Verzend</button>
+  </form>
+
+  <script>
+    $(document).ready(function() {
+      $('#vragenFormulier').submit(function(e) {
+        e.preventDefault();
+        var antwoord1 = $('#vraag1').val();
+        var antwoord2 = $('#vraag2').val();
+        var antwoord3 = $('#vraag3').val();
+        alert("Antwoord 1: " + antwoord1 + "\nAntwoord 2: " + antwoord2 + "\nAntwoord 3: " + antwoord3);
+      });
+    });
+  </script>
+</body>
+</html>
